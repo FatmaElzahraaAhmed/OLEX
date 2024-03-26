@@ -1,0 +1,958 @@
+{
+	"info": {
+		"_postman_id": "2d2624d2-74f7-49e6-a5f1-66bc76b4dc94",
+		"name": "Exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"fatma\",\r\n    \"lastName\":\"ahmed\",\r\n    \"email\":\"fatmaa1@gmail.com\",\r\n    \"password\":\"Ahmed1234\",\r\n    \"cPassword\":\"Ahmed1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/signUp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "confirmEmail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/confirm/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZWMxODNjM2QzYzliZjU5YmY4NzFjMCIsImlhdCI6MTY1OTYzOTg2OH0.ThADvnCv30w_bEc9OKcoOixfZL_CHZgNODjP0XJeNy0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"confirm",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZWMxODNjM2QzYzliZjU5YmY4NzFjMCIsImlhdCI6MTY1OTYzOTg2OH0.ThADvnCv30w_bEc9OKcoOixfZL_CHZgNODjP0XJeNy0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"fatmaahmed2272001@gmail.com\",\r\n    \"password\":\"Ahmed1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/auth/signIn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signIn"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "updatePassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZWQwMWEzODZjZmQyODNkMmM3ZWEwMSIsImlzTG9naW4iOnRydWUsImlhdCI6MTY1OTY5OTY1NX0.l2K-Gjwq2BlTVZDnrWBRv-aXt6JAO48eI-oqfbp_HIo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\":\"Aa1234567\",\r\n    \"newPassword\":\"Aa12345678\",\r\n    \"cPassword\":\"Aa12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/updatePassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"updatePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateEmail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZWU2NzNiYzNlOTUxMTg3NGMzOWFkZSIsImlzTG9naW4iOnRydWUsImlhdCI6MTY1OTc5MTE4Mn0.ccD6sbFkduF56-NUgOygLHG1tHZA_XCVJnXb6DsgIx0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newEmail\":\"fatma@gmail.com\",\r\n    \"password\":\"Ahmed1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/updateEmail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"updateEmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZWRiOTI2MjBkZjdlNzA4YjI1ZmQ0MSIsImlzTG9naW4iOnRydWUsImlhdCI6MTY1OTc0NjYyMn0.CHHGpFLObW_WYqtI0es7pm73P7O35fwZqYJnxXSSJFY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emailOfUserYouWantToDelete\":\"fatmaahmed2272001@gmail.com\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/deleteUser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"deleteUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addProfilePic",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZWU2NzNiYzNlOTUxMTg3NGMzOWFkZSIsImlzTG9naW4iOnRydWUsImlhdCI6MTY1OTc5MTE4Mn0.ccD6sbFkduF56-NUgOygLHG1tHZA_XCVJnXb6DsgIx0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": [
+										"/C:/Users/Fatma/OneDrive/Pictures/Screenshots/2020-02-22.png",
+										"/C:/Users/Fatma/OneDrive/Pictures/Screenshots/2020-02-29.png",
+										"/C:/Users/Fatma/OneDrive/Pictures/Screenshots/2020-03-18 (1).png",
+										"/C:/Users/Fatma/OneDrive/Pictures/Screenshots/2020-03-18 (2).png",
+										"/C:/Users/Fatma/OneDrive/Pictures/Screenshots/2020-03-18 (3).png"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/addProfilePic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"addProfilePic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addCoverPics",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZWU2NzNiYzNlOTUxMTg3NGMzOWFkZSIsImlzTG9naW4iOnRydWUsImlhdCI6MTY1OTc5MTE4Mn0.ccD6sbFkduF56-NUgOygLHG1tHZA_XCVJnXb6DsgIx0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": [
+										"/C:/Users/Fatma/OneDrive/Pictures/Screenshots/2020-02-22.png",
+										"/C:/Users/Fatma/OneDrive/Pictures/Screenshots/2020-02-29.png",
+										"/C:/Users/Fatma/OneDrive/Pictures/Screenshots/2020-03-18 (1).png",
+										"/C:/Users/Fatma/OneDrive/Pictures/Screenshots/2020-03-18 (2).png",
+										"/C:/Users/Fatma/OneDrive/Pictures/Screenshots/2020-03-18 (3).png"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/addCoverPics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"addCoverPics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgotPassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZWU2NzNiYzNlOTUxMTg3NGMzOWFkZSIsImlzTG9naW4iOnRydWUsImlhdCI6MTY1OTgxNDQ3N30.AAmylDpG7P0tcMW_hotkVIkKKwAJdLjE3qw4jq9YHW0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"fatmaahmed2001@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/forgotPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"forgotPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resetPassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZWU2NzNiYzNlOTUxMTg3NGMzOWFkZSIsImlzTG9naW4iOnRydWUsImlhdCI6MTY1OTgxNDU4Nn0.Jd70iPQouv8ZkwOXt7xeVf5E_BFfco7dkQBINP9nnOU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"2942\",\r\n    \"newPassword\":\"AaA123456\",\r\n    \"cPassword\":\"AaA123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/resetPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"resetPassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "softDelete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjE3YjM3MjY4YWZmYzRlZGEyZjk1ZSIsImlzTG9naW4iOnRydWUsImlhdCI6MTY1OTk5NTc0Mn0.IzIgBEhPhmpewB_gUJ3atXirCfpyclCqqgTgRntQV0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"fatmaahmed22720000000000000000001@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/softDelete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"softDelete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjNkNDJiNmQ3OTNlYjQwMzJhMTBiYiIsImlzTG9naW4iOnRydWUsImlhdCI6MTY2MDE2MTc5MX0.we3aqLT_n6vLZNGrDK7LQ9_oWC-aoRuF3DA0dStsVdg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/user/getAllUsers?page=1&size=100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"getAllUsers"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "addProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjNjZjYwNDRmOThmNmRkNWQwMmY5ZiIsImlzTG9naW4iOnRydWUsImlhdCI6MTY2MDE0NTUzNn0.1c5sXJKuPv6bV55TNSEvp41aW8Ax9XLab8pxP66G11o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productTitle\":\"Fatma's Exam Product\",\r\n    \"productDesc\":\"This is description\",\r\n    \"productPrice\":300\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/product/addProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"addProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjE3YjM3MjY4YWZmYzRlZGEyZjk1ZSIsImlzTG9naW4iOnRydWUsImlhdCI6MTY2MDAwMTIxOH0.zyiTDECR7y5Y0Uu5ZCdaWXjCXr2WuBK5eQ6x72ECjnc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productTitle\":\"iphone\",\r\n    \"productDesc\":\"smartt phone\",\r\n    \"productPrice\":800000,\r\n    \"_id\":\"62f19ace59758726a7af39e8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/product/updateProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"updateProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjE3YjM3MjY4YWZmYzRlZGEyZjk1ZSIsImlzTG9naW4iOnRydWUsImlhdCI6MTY1OTk5NjI5OH0.K1WFaGOMZeLzOn5scEfr4hPYZ5Yracys2zOOGGgxjvo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"62f13de4ea8c27c2c6c411de\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/product/deleteProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"deleteProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "softDeleteProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjE3YjM3MjY4YWZmYzRlZGEyZjk1ZSIsImlzTG9naW4iOnRydWUsImlhdCI6MTY1OTk5NjI5OH0.K1WFaGOMZeLzOn5scEfr4hPYZ5Yracys2zOOGGgxjvo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"62f13e9c6ac13ae3bae6b4c7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/product/softDeleteProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"softDeleteProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "likeProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjAzYTcyYjFjNzkxNWExOTIyY2VkNiIsImlzTG9naW4iOnRydWUsImlhdCI6MTY2MDE0MTI5NX0.4FJ5gwzu8RVh1BpqQ0j8xU9FajLboPyxxMlFHNVjH8U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/product/likeUnLikeProduct/62f19ad459758726a7af39ee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"likeUnLikeProduct",
+								"62f19ad459758726a7af39ee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addToWishlist",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjNjZjYwNDRmOThmNmRkNWQwMmY5ZiIsImlzTG9naW4iOnRydWUsImlhdCI6MTY2MDE0NTUzNn0.1c5sXJKuPv6bV55TNSEvp41aW8Ax9XLab8pxP66G11o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/product/addToWishlist/62f3b978a7abb873bc7f39b6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"addToWishlist",
+								"62f3b978a7abb873bc7f39b6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "hideProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjNkNDJiNmQ3OTNlYjQwMzJhMTBiYiIsImlzTG9naW4iOnRydWUsImlhdCI6MTY2MDE0Njc3Mn0.E2ikDqK8v_U43sa8tT0uMFftLNmY-vduwrKtLXKKIZU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\":\"62f3b978a7abb873bc7f39b6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/product/hideProduct",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"product",
+								"hideProduct"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comment",
+			"item": [
+				{
+					"name": "addComment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjNkNDJiNmQ3OTNlYjQwMzJhMTBiYiIsImlzTG9naW4iOnRydWUsImlhdCI6MTY2MDE0Njc3Mn0.E2ikDqK8v_U43sa8tT0uMFftLNmY-vduwrKtLXKKIZU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"commentBody\":\"ay klaaaaaaaaaaaam\",\r\n    \"productId\":\"62f19ace59758726a7af39e8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/comment/addComment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"comment",
+								"addComment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addReply",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjNkNDJiNmQ3OTNlYjQwMzJhMTBiYiIsImlzTG9naW4iOnRydWUsImlhdCI6MTY2MDE2MTc5MX0.we3aqLT_n6vLZNGrDK7LQ9_oWC-aoRuF3DA0dStsVdg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"replyBody\":\"ay klaaaaaaaaaaaam\",\r\n    \"commentId\":\"62f40ccd000c977f1e11147a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/comment/addReply",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"comment",
+								"addReply"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateComment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjAzYTcyYjFjNzkxNWExOTIyY2VkNiIsImlzTG9naW4iOnRydWUsImlhdCI6MTY2MDE3MTg0OX0._BL5QgmjI3qz_SzrigBXYd3R8d8_yQCvlE7DR7CTxos",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"commentBody\":\"jjjjjjjjhhhhhhhhhhhhjj\",\r\n    \"commentId\":\"62f40ccd000c977f1e11147a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/comment/updateComment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"comment",
+								"updateComment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteComment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjNkNDJiNmQ3OTNlYjQwMzJhMTBiYiIsImlzTG9naW4iOnRydWUsImlhdCI6MTY2MDE3MzY2MX0.41KHw7FxQitIftHStAduEKc2hQngVPorxJOqIp0N6KE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/comment/deleteComment/62f40ccd000c977f1e11147a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"comment",
+								"deleteComment",
+								"62f40ccd000c977f1e11147a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "likeUnLikeComment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZjAzYTcyYjFjNzkxNWExOTIyY2VkNiIsImlzTG9naW4iOnRydWUsImlhdCI6MTY2MDE3NDE2N30.JVcDFOqNxVHjNIfCDe9x6HVU2S6IZNZyE7VUZ6E-dLM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/comment/likeUnLikeComment/62f42ea0433b56c36688f338",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"comment",
+								"likeUnLikeComment",
+								"62f42ea0433b56c36688f338"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

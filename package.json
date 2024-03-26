@@ -1,0 +1,31 @@
+{
+  "name": "fatmaelzahraa_ahmed_saturday1_exam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "http-status-codes": "^2.2.0",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^2.3.3",
+    "nanoid": "^4.0.0",
+    "node-schedule": "^2.1.0",
+    "nodemailer": "^6.7.7",
+    "nodemon": "^2.0.19",
+    "pdfkit": "^0.13.0",
+    "qrcode": "^1.5.1",
+    "sequelize": "^6.21.3",
+    "socket.io": "^4.5.1"
+  }
+}
